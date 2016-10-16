@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Document</title>
+  <link rel="stylesheet" href=" css/main.css"/>
+</head>
+<body>
+  <div id="page-wrapper">
+    <form class="form-interest" action="" name="add-interest">
+      <label class="form-label" for="#interest-name">Название интереса</label>
+      <input class="form-text" id="interest_name" type="text"/>
+      <button class="button button_action" type="submit">Добавить интерес</button>
+      <button class="button button_decline js-closemodal" type="button">Передумал</button>
+    </form>
+    <div class="profile-section">
+      <div class="tabs">
+        <nav class="tabs__nav tabs-navigation">
+          <div class="tabs-navigation__list">
+            <li class="tabs-navigation__item"><a class="tabs-navigation__link active" href="#">Профиль</a></li>
+            <li class="tabs-navigation__item"><a class="tabs-navigation__link" href="#">Друзья пользователя</a></li>
+          </div>
+        </nav>
+        <div class="tabs__content">
+          <section class="tab-section">
+            <!-- профиль пользователя-->
+            <div class="profile">
+              <div class="profile__sidebar">
+                <div class="profile-image"><img src="images/profile.jpg" alt="фото пользователя"/></div>
+                <button class="button button_action" type="button">Добавить в друзья</button>
+              </div>
+              <div class="profile__content">
+                <div class="profile__content-header">
+                  <h2 class="profile-name" data-editable-type="name">Виталя Гора</h2><span class="profile-city" data-editable-type="city">г. Нижние шахты</span>
+                </div>
+                <dl class="profile-features">
+                  <div class="profile-features__row">
+                    <dt class="profile-features__label">Семейное положение</dt>
+                    <dd class="profile-features__description" data-editable-type="status">холост</dd>
+                  </div>
+                  <div class="profile-features__row">
+                    <dt class="profile-features__label">Телефон</dt>
+                    <dd class="profile-features__description" data-editable-type="phone">+7 (440) 554 32 12</dd>
+                  </div>
+                  <div class="profile-features__row">
+                    <dt class="profile-features__label">E-mail</dt>
+                    <dd class="profile-features__description"><a class="common-link" data-editable-type="email" href="mailto:vitalya@gora.ru">vitalya@gora.ru</a></dd>
+                  </div>
+                </dl>
+                <div class="interests"><span class="interests__title">Интересы</span>
+                  <ul class="interests__list">
+                    <li class="interests__item"><a class="interests__link" href="#">музыка</a></li>
+                    <li class="interests__item"><a class="interests__link" href="#">компьютеры</a></li>
+                    <li class="interests__item"><a class="interests__link" href="#">радио</a></li>
+                  </ul><a class="add-more common-link" href="#">добавить еще</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="tab-section">
+            <!-- секция с друзьями-->
+            <ul class="friendlist">
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-1.jpg" alt="фото пользователя - Лев Бронштейн"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Лев Бронштейн</a><span class="friend-city">г. Ханты-Мансийск</span>
+                  <div class="friend-status">Online</div>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-2.jpg" alt="фото пользователя - Яндекс Петренко"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Яндекс Петренко</a><span class="friend-city">г. Пермь</span>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-3.jpg" alt="фото пользователя - Инна Нашлась"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Инна Нашлась</a><span class="friend-city">г. Омск</span>
+                  <div class="friend-status">Online</div>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-4.jpg" alt="фото пользователя - Находка Капитал"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Находка Капитал</a><span class="friend-city">г. Усть-Бельск</span>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-5.jpg" alt="фото пользователя - Успех Возможностей"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Успех Возможностей</a><span class="friend-city">г. Радонеж</span>
+                  <div class="friend-status">Online</div>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-6.jpg" alt="фото пользователя - Алла Подольская"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Алла Подольская</a><span class="friend-city">г. Петропавловск-Камчатский</span>
+                  <div class="friend-status">Online</div>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-3.jpg" alt="фото пользователя - Инна Нашлась"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Инна Нашлась</a><span class="friend-city">г. Омск</span>
+                  <div class="friend-status">Online</div>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-4.jpg" alt="фото пользователя - Находка Капитал"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Находка Капитал</a><span class="friend-city">г. Усть-Бельск</span>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-5.jpg" alt="фото пользователя - Успех Возможностей"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Успех Возможностей</a><span class="friend-city">г. Радонеж</span>
+                  <div class="friend-status">Online</div>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-6.jpg" alt="фото пользователя - Алла Подольская"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Алла Подольская</a><span class="friend-city">г. Петропавловск-Камчатский</span>
+                  <div class="friend-status">Online</div>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-3.jpg" alt="фото пользователя - Инна Нашлась"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Инна Нашлась</a><span class="friend-city">г. Омск</span>
+                  <div class="friend-status">Online</div>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-4.jpg" alt="фото пользователя - Находка Капитал"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Находка Капитал</a><span class="friend-city">г. Усть-Бельск</span>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-5.jpg" alt="фото пользователя - Успех Возможностей"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Успех Возможностей</a><span class="friend-city">г. Радонеж</span>
+                  <div class="friend-status">Online</div>
+                </div>
+              </div>
+              <div class="friend friendlist__item">
+                <div class="friend__image"><img src="/images/user-6.jpg" alt="фото пользователя - Алла Подольская"/></div>
+                <div class="friend__content"><a class="friend-name" href="#">Алла Подольская</a><span class="friend-city">г. Петропавловск-Камчатский</span>
+                  <div class="friend-status">Online</div>
+                </div>
+              </div>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div><!--[if IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script><![endif]-->
+  <script src="http://buzinas.github.io/simple-scrollbar/simple-scrollbar.min.js"></script>
+  <script src="js/common.js"></script>
+</body>

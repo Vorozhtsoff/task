@@ -1,0 +1,44 @@
+{
+  "name": "my-gulp-combiner",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "browser-sync": "^2.12.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-base64": "^0.1.3",
+    "gulp-csslint": "^0.3.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.1",
+    "gulp-imacss": "^1.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg2png": "^2.0.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.6",
+    "imacss": "^1.0.0",
+    "node-notifier": "^4.6.0",
+    "node-notify": "^1.0.0",
+    "yargs": "^4.7.1"
+  },
+  "dependencies": {
+    "baron": "^2.2.7",
+    "gulp-pug2": "0.0.1",
+    "jquery": "^3.1.0",
+    "normalize.scss": "^0.1.0",
+    "simple-scrollbar": "^0.2.0"
+  }
+}

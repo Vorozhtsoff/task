@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  title Document
+  link(rel="stylesheet", href=" css/main.css")
+body
+  #page-wrapper
+    form.form-interest(action="" name="add-interest")
+      label.form-label(for="#interest-name") Название интереса
+      input.form-text#interest_name(type="text")
+      button.button.button_action(type="submit") Добавить интерес
+      button.button.button_decline.js-closemodal(type="button") Передумал
+
+    .profile-section
+      .tabs
+        nav.tabs__nav.tabs-navigation
+          .tabs-navigation__list
+            li.tabs-navigation__item
+              a.tabs-navigation__link.active(href="#") Профиль
+            li.tabs-navigation__item
+              a.tabs-navigation__link(href="#") Друзья пользователя
+
+        .tabs__content
+          section.tab-section
+            // профиль пользователя
+            .profile
+              .profile__sidebar
+                .profile-image
+                  img(src="images/profile.jpg", alt="фото пользователя")
+                button.button.button_action(type="button") Добавить в друзья
+              .profile__content
+                .profile__content-header
+                  h2.profile-name(data-editable-type="name") Виталя Гора
+                  span.profile-city(data-editable-type="city") г. Нижние шахты
+                dl.profile-features
+                  .profile-features__row
+                    dt.profile-features__label Семейное положение
+                    dd.profile-features__description(data-editable-type="status") холост
+                  .profile-features__row
+                    dt.profile-features__label Телефон
+                    dd.profile-features__description(data-editable-type="phone") +7 (440) 554 32 12
+                  .profile-features__row
+                    dt.profile-features__label E-mail
+                    dd.profile-features__description
+                      a.common-link(data-editable-type="email" href="mailto:vitalya@gora.ru") vitalya@gora.ru
+
+                .interests
+                  span.interests__title Интересы
+                  ul.interests__list
+                    - var interests = ['музыка','компьютеры','радио']
+
+                    each item in interests
+                      li.interests__item
+                        a.interests__link(href="#")= item
+                  a.add-more.common-link(href="#") добавить еще
+
+
+          section.tab-section
+            // секция с друзьями
+            ul.friendlist
+              -
+                var friends = [
+                  {
+                    img: '/images/user-1.jpg',
+                    name: 'Лев Бронштейн',
+                    city: 'г. Ханты-Мансийск',
+                    status: true
+                  },{
+                    img: '/images/user-2.jpg',
+                    name: 'Яндекс Петренко',
+                    city: 'г. Пермь'
+                  },{
+                    img: '/images/user-3.jpg',
+                    name: 'Инна Нашлась',
+                    city: 'г. Омск',
+                    status: true
+                  },{
+                    img: '/images/user-4.jpg',
+                    name: 'Находка Капитал',
+                    city: 'г. Усть-Бельск'
+                  },{
+                    img: '/images/user-5.jpg',
+                    name: 'Успех Возможностей',
+                    city: 'г. Радонеж',
+                    status: true
+                  },{
+                    img: '/images/user-6.jpg',
+                    name: 'Алла Подольская',
+                    city: 'г. Петропавловск-Камчатский',
+                    status: true
+                  },{
+                    img: '/images/user-3.jpg',
+                    name: 'Инна Нашлась',
+                    city: 'г. Омск',
+                    status: true
+                  },{
+                    img: '/images/user-4.jpg',
+                    name: 'Находка Капитал',
+                    city: 'г. Усть-Бельск'
+                  },{
+                    img: '/images/user-5.jpg',
+                    name: 'Успех Возможностей',
+                    city: 'г. Радонеж',
+                    status: true
+                  },{
+                    img: '/images/user-6.jpg',
+                    name: 'Алла Подольская',
+                    city: 'г. Петропавловск-Камчатский',
+                    status: true
+                  },{
+                    img: '/images/user-3.jpg',
+                    name: 'Инна Нашлась',
+                    city: 'г. Омск',
+                    status: true
+                  },{
+                    img: '/images/user-4.jpg',
+                    name: 'Находка Капитал',
+                    city: 'г. Усть-Бельск'
+                  },{
+                    img: '/images/user-5.jpg',
+                    name: 'Успех Возможностей',
+                    city: 'г. Радонеж',
+                    status: true
+                  },{
+                    img: '/images/user-6.jpg',
+                    name: 'Алла Подольская',
+                    city: 'г. Петропавловск-Камчатский',
+                    status: true
+                  }
+                ]
+              each item in friends
+                .friend.friendlist__item
+                  .friend__image
+                    img(src=item.img, alt=`фото пользователя - ${item.name}`)
+                  .friend__content
+                    a.friend-name(href="#")= item.name
+                    span.friend-city= item.city
+                    if item.status
+                      .friend-status Online
+
+  <!--[if IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script><![endif]-->
+  //- script(src="js/simple-scrollbar.min.js")
+  script(src="http://buzinas.github.io/simple-scrollbar/simple-scrollbar.min.js")
+  script(src="js/common.js")

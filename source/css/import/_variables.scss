@@ -1,0 +1,28 @@
+
+
+// Fonts
+// --------------------------------
+$font: 'Arial', sans-serif;
+
+
+// Colors
+// --------------------------------
+$color-link: #1574af;
+$color-tag-hover: #f3f3f3;
+$color-city: #757575;
+$color-border: #d5d5d5;
+$color-bg: #e0e0e0;
+$color-flag: #2f8a26;
+
+// gradients
+// --------------------------------
+$gradient-tab: linear-gradient(to top, #1f68ac 0%, #0685b4 100%);
+$ie-button: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e68200', endColorstr='#e65300',GradientType=0);
+$gradient-action-button: linear-gradient(to top, #e65300 0%, #e68200 100%);
+$ie-tab: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0685b4', endColorstr='#1f68ac',GradientType=0);
+
+
+// media
+// ----------------------------------
+$media-small : "min-width: 485px";
+$media-middle : "min-width: 600px";

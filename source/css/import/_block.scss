@@ -1,0 +1,397 @@
+#page-wrapper{
+  background-color: $color-bg;
+  padding-top: 45px;
+  min-height: 100%;
+}
+
+
+body,
+html{
+  height: 100%;
+  font-size: 14px;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,dl{
+  &:first-child{
+    margin-top: 0;
+  }
+}
+
+.profile-section{
+  line-height: 1.45;
+  max-width: 487px;
+  @include rem(12);
+  color: black;
+  min-width: 320px;
+
+  @media ($media-middle){
+    margin-left: 40px;
+  }
+}
+
+.profile{
+  &__sidebar{
+    width: 150px;
+    padding-right: 18px;
+    padding-bottom: 15px;
+  }
+
+  &__content-header{
+    margin-bottom: 20px;
+  }
+
+  @media($media-small){
+    &__sidebar{
+      float: left;
+    }
+
+    &__content{
+      margin-left: 150px;
+    }
+  }
+}
+
+.tabs{
+  &__content{
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.31);
+    padding: 15px ;
+  }
+}
+
+.tabs-navigation{
+  &__list{
+    @extend %reset-menu;
+  }
+
+  &__item{
+    @include rem(14);
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+
+    &:not(:first-child){
+      margin-left: 10px;
+    }
+  }
+
+  &__link{
+    display: block;
+    padding: 7px 15px;
+    text-decoration: none;
+    background-image: $gradient-tab;
+    color: inherit;
+    border-radius: 5px 5px 0 0;
+
+    &:not(.active){
+      filter: $ie-tab;
+    }
+
+    &.active{
+      background-image: none;
+      background-color: #fff;
+      color: black;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.31);
+      position: relative;
+
+      &:after{
+        content: '';
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        height: 5px;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.tab-section{
+  height: 250px;
+  overflow: hidden;
+}
+
+.profile-image{
+  margin-bottom: 5px;
+  position: relative;
+
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.32);
+  }
+}
+
+.button{
+  @extend %button-reset;
+  @include rem(12);
+  padding: 7px 12px;
+  border-radius: 1px;
+  margin-bottom: 15px;
+
+  &_action{
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-image: $gradient-action-button;
+    filter: $ie-button;
+  }
+
+  &_decline{
+    width: 100%;
+    color: white;
+    background-color: $color-link;
+  }
+}
+
+.profile-features{
+  margin: 0 0 26px;
+  @include rem(0);
+
+  &__row{
+    overflow: hidden;
+  }
+
+  &__label{
+    @include rem(12);
+    padding: 3px 15px 3px 0;
+    color: black;
+    font-weight: 700;
+    width: 53%;
+    float: left;
+    // display: inline-block;
+  }
+
+  &__description{
+    @include rem(12);
+    vertical-align: top;
+    // display: inline-block;
+    padding: 3px 0;
+    margin-left: 0;
+    margin-left: 53%;
+  }
+}
+
+.modal-overlay{
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+
+.modal-wrapper{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modal{
+  position: absolute;
+  top: calc(50% - 60px);
+  left: calc(50% - 100px);
+  z-index: 51;
+}
+
+.form-interest{
+  padding: 15px;
+  background-color: #fff;
+  max-width: 200px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.31);
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.form-label{
+  display: block;
+  @include rem(14);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.form-text{
+  margin-bottom: 10px;
+  height: 32px;
+  line-height: 30px;
+  width: 100%;
+  border: 1px solid $color-border;
+  border-radius: 3px;
+  padding: 0 10px;
+  @include rem(12);
+}
+
+.interests{
+  &__title{
+    display: block;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 5px;
+  }
+
+  &__list{
+    @extend %reset-menu;
+    margin: 0 -1px;
+  }
+
+  &__item{
+    vertical-align: top;
+    display: inline-block;
+    margin: 0 1px 10px;
+  }
+
+  &__link{
+    display: block;
+    @include rem(12);
+    padding: 3px 10px;
+    color: $color-link;
+    text-decoration: none;
+    border: 1px solid $color-border;
+    border-radius: 3px;
+    transition: all .3s;
+    cursor: pointer;
+
+    @media ($media-small){
+      &:hover{
+        background-color: $color-tag-hover;
+        color: #000;
+      }
+    }
+
+    &:active{
+      background-color: $color-tag-hover;
+      color: #000;
+      position: relative;
+      bottom: 2px;
+    }
+  }
+}
+
+.profile-name{
+  @include rem(23);
+  margin: 0;
+}
+
+.profile-city{
+  color: $color-city;
+  @include rem(11);
+  margin-top: -2px;
+  line-height: 1.45;
+  display: block;
+}
+
+.common-link{
+  color: $color-link;
+
+  @media ($media-middle){
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+
+// friendlist
+// ------------------
+
+.friendlist{
+  clear: both;
+  @extend %reset-menu;
+  margin: 0 -5px -30px;
+
+
+  &__item{
+    padding: 0 5px 30px;
+    vertical-align: top;
+    display: inline-block;
+    @include rem(13);
+    width: 100%;
+  }
+
+  @media ($media-small){
+
+    &__item{
+      width: 50%;
+    }
+  }
+}
+
+.friend{
+  line-height: 1.2;
+
+  &__image{
+    float: left;
+    width: 62px;
+    height: 62px;
+  }
+
+  &__content{
+    margin-left: 77px;
+    position: relative;
+    height: 62px;
+  }
+}
+
+.friend-name{
+  display: block;
+  @extend .common-link;
+  @include rem(13);
+  font-weight: 700;
+  margin: 0 0 0.2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.friend-city{
+  display: block;
+  display: -webkit-box;
+  @include rem(11);
+  max-height: 26px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.friend-status{
+  @include rem(10);
+  font-style: italic;
+  color: $color-flag;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.add-more{
+  display: block;
+  @include rem(11)
+}
+
+[data-editable-type]{
+
+  &:focus{
+    background-color: $color-tag-hover;
+    display: block;
+    outline: none;
+  }
+}
