@@ -1,6 +1,8 @@
 # TASK
 сборщик: gulp
+
 инструменты: pug2(jade), scss, JS(ES5, без jQuery)
+
 кроссбраузерность: IE9+
 
 
