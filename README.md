@@ -1,8 +1,8 @@
 # TASK
-сборщик: gulp<br>
-инструменты: pug2(jade), scss, JS(ES5, без jQuery)
-кроссбраузерность: IE9+
-сторонние библиотеки: [simple-scrollbar](ithub.com/buzinas/simple-scrollbar), [classList polyfill](github.com/eligrey/classList.js/)
+**сборщик**: gulp<br>
+**инструменты**: pug2(jade), scss, JS(ES5, без jQuery)<br>
+**кроссбраузерность**: IE9+<br>
+**сторонние библиотеки**: [simple-scrollbar](ithub.com/buzinas/simple-scrollbar), [classList polyfill](github.com/eligrey/classList.js/)<br>
 
 
 чтобы запустить необходимо:
