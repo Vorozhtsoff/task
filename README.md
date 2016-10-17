@@ -1,5 +1,5 @@
 # TASK
-сборщик: gulp
+сборщик: gulp<br>
 инструменты: pug2(jade), scss, JS(ES5, без jQuery)
 кроссбраузерность: IE9+
 сторонние библиотеки: [simple-scrollbar](ithub.com/buzinas/simple-scrollbar), [classList polyfill](github.com/eligrey/classList.js/)
