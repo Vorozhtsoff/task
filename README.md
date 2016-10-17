@@ -5,6 +5,8 @@
 
 кроссбраузерность: IE9+
 
+сторонние библиотеки: [simple-scrollbar](ithub.com/buzinas/simple-scrollbar), [classList polyfill](github.com/eligrey/classList.js/)
+
 
 чтобы запустить необходимо:
 * проверить что установлен [node.js](nodejs.org/), [git](git-scm.com/)
