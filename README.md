@@ -1,6 +1,6 @@
 # TASK
 **сборщик**: [gulp](http://gulpjs.com/)<br>
-**инструменты**: [pug2(jade)](https://pugjs.org/), [scss](sass-lang.com/), JS(ES5, без jQuery)<br>
+**инструменты**: [pug2(jade)](https://pugjs.org/), [scss](sass-lang.com/), JS (ES5, без jQuery)<br>
 **кроссбраузерность**: IE9+<br>
 **сторонние библиотеки**: [simple-scrollbar](ithub.com/buzinas/simple-scrollbar), [classList polyfill](github.com/eligrey/classList.js/)<br>
 
